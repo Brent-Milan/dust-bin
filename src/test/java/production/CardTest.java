@@ -68,6 +68,12 @@ public class CardTest {
 		assertEquals(expected, underTest.convertToString(10));
 	}
 	
+	@Test
+	public void shouldReturnStringFor11AsJack() {
+		String expected = "Jack";
+		assertEquals(expected, underTest.convertToString(11));
+	}
+	
 	private int findElementFrequency(String[] array, String message) {
 		int count = 0;
 		for(String suitName: array) {

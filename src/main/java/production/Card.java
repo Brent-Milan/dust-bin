@@ -13,6 +13,9 @@ public class Card {
 		if(number == 10) {
 			return "T";
 		}
+		if(number == 11) {
+			return "Jack";
+		}
 		return "error";
 		}
 	
