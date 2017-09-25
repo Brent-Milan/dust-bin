@@ -104,6 +104,20 @@ public class CardTest {
 		assertEquals(expected, underTest.convertToString("Clubs"));
 	}
 	
+	@Test
+	public void shouldReturnStringHForHearts() {
+		String expected = "H";
+		assertEquals(expected, underTest.convertToString("Hearts"));
+	}
+	
+	@Test
+	public void shouldReturnStringDForDiamonds() {
+		String expected = "D";
+		assertEquals(expected, underTest.convertToString("Diamonds"));
+	}
+	
+	
+	
 	
 	
 	

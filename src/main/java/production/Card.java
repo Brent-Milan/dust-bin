@@ -28,7 +28,11 @@ public class Card {
 			return "S";
 		} if(message == "Clubs") {
 			return "C";
-		} else {
+		} if(message == "Hearts") {
+			return "H";
+		} if(message == "Diamonds") {
+			return "D";
+		}else {
 			return "";
 		}
 	}
