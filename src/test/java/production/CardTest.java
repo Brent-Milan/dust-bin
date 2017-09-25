@@ -63,17 +63,22 @@ public class CardTest {
 	}
 	
 	@Test 
-	public void shouldReturnStringFor10AsT() {
+	public void shouldReturnStringTForInt10() {
 		String expected = "T";
 		assertEquals(expected, underTest.convertToString(10));
 	}
 	
 	@Test
-	public void shouldReturnStringFor11AsJack() {
-		String expected = "Jack";
+	public void shouldReturnStringJForInt11() {
+		String expected = "J";
 		assertEquals(expected, underTest.convertToString(11));
 	}
 	
+	@Test
+	public void shouldReturnStringQForInt12() {
+		String expected = "Q";
+		assertEquals(expected, underTest.convertToString(12));
+	}
 	private int findElementFrequency(String[] array, String message) {
 		int count = 0;
 		for(String suitName: array) {

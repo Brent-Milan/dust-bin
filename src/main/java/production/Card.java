@@ -14,7 +14,10 @@ public class Card {
 			return "T";
 		}
 		if(number == 11) {
-			return "Jack";
+			return "J";
+		}
+		if(number == 12) {
+			return "Q";
 		}
 		return "error";
 		}
