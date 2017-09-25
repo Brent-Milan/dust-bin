@@ -2,6 +2,7 @@ package production;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 import org.junit.Before;
@@ -42,6 +43,13 @@ public class CardTest {
 		int count = findElementFrequency(underTest.suits, "Diamonds");
 		
 		assertEquals(1, count);
+	}
+	
+	@Test
+	public void shouldContainExpectedElements() {
+		int[] expected = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+		
+		assertArrayEquals(expected, underTest.values);
 	}
 
 	private int findElementFrequency(String[] array, String message) {
