@@ -2,5 +2,5 @@ package production;
 
 public class Card {
 
-	protected String[] suits = { "Spades", "Hearts" };
+	protected String[] suits = { "Spades", "Clubs", "Hearts", "Diamonds" };
 }

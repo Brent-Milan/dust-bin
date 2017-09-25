@@ -29,6 +29,20 @@ public class CardTest {
 		
 		assertEquals(1, count);
 	}
+	
+	@Test
+	public void shouldReturnAFrequencyOfOneForClubs() {
+		int count = findElementFrequency(underTest.suits, "Clubs");
+		
+		assertEquals(1, count);
+	}
+	
+	@Test
+	public void shouldReturnAFrequencyOfOneForDiamonds() {
+		int count = findElementFrequency(underTest.suits, "Diamonds");
+		
+		assertEquals(1, count);
+	}
 
 	private int findElementFrequency(String[] array, String message) {
 		int count = 0;
