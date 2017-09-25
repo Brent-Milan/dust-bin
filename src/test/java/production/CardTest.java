@@ -17,15 +17,27 @@ public class CardTest {
 	}
 
 	@Test
-	public void shouldReturnAFrequencyOfOneSpade() {
+	public void shouldReturnAFrequencyOfOneForSpades() {
+		int count = findElementFrequency(underTest.suits, "Spades");
+		
+		assertEquals(1, count);
+	}
+	
+	@Test
+	public void shouldReturnAFrequencyOfOneForHearts() {
+		int count = findElementFrequency(underTest.suits, "Hearts");
+		
+		assertEquals(1, count);
+	}
+
+	private int findElementFrequency(String[] array, String message) {
 		int count = 0;
-		for(String suitName: underTest.suits) {
-			if(suitName == "Spades") {
+		for(String suitName: array) {
+			if(suitName == message) {
 				count++;
 			}
 		}
-		
-		assertEquals(1, count);
+		return count;
 	}
 
 }
