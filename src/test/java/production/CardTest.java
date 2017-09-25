@@ -49,10 +49,17 @@ public class CardTest {
 	}
 
 	@Test
-	public void shouldReturnStringForTwo() {
+	public void shouldReturnStringFor2() {
 		String expected = "2";
 		
 		assertEquals(expected, underTest.convertToString(2));
+	}
+	
+	@Test
+	public void shouldReturnStringFor3() {
+		String expected = "3";
+		
+		assertEquals(expected, underTest.convertToString(3));
 	}
 	
 	private int findElementFrequency(String[] array, String message) {
