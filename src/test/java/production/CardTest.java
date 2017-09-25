@@ -92,6 +92,13 @@ public class CardTest {
 		assertEquals(expected, underTest.convertToString(14));
 	}
 	
+	@Test
+	public void shouldReturnStringSForSpades() {
+		String expected = "S";
+		assertEquals(expected, underTest.convertToString("Spades"));
+	}
+	
+	
 	
 	
 	
