@@ -24,7 +24,13 @@ public class Card {
 		}
 	
 	public String convertToString(String message) {
-		return "S";
+		if(message == "Spades") {
+			return "S";
+		} if(message == "Clubs") {
+			return "C";
+		} else {
+			return "";
+		}
 	}
 
 	private boolean isBetweenTwoAndNine(int number) {

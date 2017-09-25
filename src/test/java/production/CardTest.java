@@ -98,6 +98,12 @@ public class CardTest {
 		assertEquals(expected, underTest.convertToString("Spades"));
 	}
 	
+	@Test
+	public void shouldReturnStringCForClubs() {
+		String expected = "C";
+		assertEquals(expected, underTest.convertToString("Clubs"));
+	}
+	
 	
 	
 	
