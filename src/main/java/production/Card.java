@@ -22,6 +22,9 @@ public class Card {
 		if(number == 13) {
 			return "K";
 		}
+		if(number == 14) {
+			return "A";
+		}
 		return "error";
 		}
 	
