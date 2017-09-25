@@ -27,31 +27,34 @@ public class CardTest {
 	@Test
 	public void shouldReturnAFrequencyOfOneForHearts() {
 		int count = findElementFrequency(underTest.suits, "Hearts");
-		
 		assertEquals(1, count);
 	}
 	
 	@Test
 	public void shouldReturnAFrequencyOfOneForClubs() {
 		int count = findElementFrequency(underTest.suits, "Clubs");
-		
 		assertEquals(1, count);
 	}
 	
 	@Test
 	public void shouldReturnAFrequencyOfOneForDiamonds() {
 		int count = findElementFrequency(underTest.suits, "Diamonds");
-		
 		assertEquals(1, count);
 	}
 	
 	@Test
 	public void shouldContainExpectedElements() {
 		int[] expected = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
-		
 		assertArrayEquals(expected, underTest.values);
 	}
 
+	@Test
+	public void shouldReturnStringForTwo() {
+		String expected = "2";
+		
+		assertEquals(expected, underTest.convertToString(2));
+	}
+	
 	private int findElementFrequency(String[] array, String message) {
 		int count = 0;
 		for(String suitName: array) {
