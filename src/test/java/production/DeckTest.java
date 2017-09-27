@@ -19,13 +19,22 @@ public class DeckTest {
 	
 	@Test
 	public void shouldReturnSuitOfSpades() {
-		ArrayList<String> expected = createSpades();
-		underTest.createSuit("Spades");
+		ArrayList<String> expected = createTestSuitSpades();
 		
-		assertEquals(expected, underTest.getCards());
+		
+		assertEquals(expected, underTest.createSuit("Spades"));
 	}
+	
+//	@Test
+//	public void shouldReturnListWithSizeOf52() {
+//		int expected = 52;
+//		ArrayList<String> result = underTest.createDeck();
+//		
+//		assertEquals(expected, result.size());
+//	}
 
-	private ArrayList<String> createSpades() {
+
+	private ArrayList<String> createTestSuitSpades() {
 		ArrayList<String> spades = new ArrayList<String>();
 		spades.add("S2");
 		spades.add("S3");
@@ -44,10 +53,5 @@ public class DeckTest {
 	}
 	
 	
-
-//	@Test
-//	public void shouldContainAllHeartCards() {
-//		String[] expected = { "H2", "H3", "H4", "H5", "H7", "H8", "H9", "HT", "HJ", "HQ", "HK", "HA" };
-//	}
 
 }
