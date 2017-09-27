@@ -47,20 +47,20 @@ public class DeckTest {
 	}
 	
 	@Test
-	public void shouldReturnValueOf2() {
+	public void shouldReturnValueOf2ForSuitMap() {
 		HashMap<String, Integer> test = underTest.createSuitMap("Spades");
 		int result = test.get("S2");
 		
 		assertEquals(2, result);
 	}
 	
-//	@Test
-//	public void shouldReturnValueOf2ForHearts() {
-//		HashMap<String, Integer> test = underTest.createDeck();
-//		int result = test.get("H2");
-//		
-//		assertEquals(2, result);
-//	}
+	@Test
+	public void shouldReturnValueOf2DeckMap() {
+		HashMap<String, Integer> test = underTest.createDeck();
+		int result = test.get("H2");
+		
+		assertEquals(2, result);
+	}
 
 
 	private ArrayList<String> createTestSuitSpades() {

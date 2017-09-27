@@ -35,18 +35,19 @@ public class Deck {
 	}
 
 
-//	public HashMap<String, Integer> createDeck() {
-//		HashMap<String, Integer> map = new HashMap<String, Integer>();
-//		ArrayList<String> keys = createDeckKeys();
-//		String[] keysAsArray = keys.toArray(new String[keys.size()]);
-//		int[] values = card.values;
-//		for(int index = 0; index < keysAsArray.length ; index++) {
-//			for(int index2 = 0; index < values.length; index++) {
-//				map.put(keysAsArray[index], values[index2]);
-//			}
-//		}
-//		return map;
-//	}
+	public HashMap<String, Integer> createDeck() {
+		HashMap<String, Integer> spadeEntries = createSuitMap("Spades");
+		HashMap<String, Integer> heartEntries = createSuitMap("Hearts"); 
+		HashMap<String, Integer> clubEntries = createSuitMap("Club"); 
+		HashMap<String, Integer> diamondEntries = createSuitMap("Diamond"); 
+		
+		HashMap<String, Integer> deckMap = new HashMap<String, Integer>(); 
+		deckMap.putAll(spadeEntries);
+		deckMap.putAll(heartEntries);
+		deckMap.putAll(clubEntries);
+		deckMap.putAll(diamondEntries);
+		return deckMap;
+	}
 	
 	public HashMap<String, Integer> createSuitMap(String suit) {
 		HashMap<String, Integer> suitMap = new HashMap<String, Integer>();
