@@ -7,7 +7,11 @@ public class Deck {
 	Card card = new Card();
 	ArrayList<String> cards = new ArrayList<String>();
 
-	public ArrayList<String> createSuit(String suit) {
+	public ArrayList<String> getCards() {
+		return cards;
+	}
+	
+	public ArrayList<String> createSuitKeys(String suit) {
 		ArrayList<String> suitCards = new ArrayList<String>();
 		String suitLetter = card.convertToString(suit);
 		int[] values = card.values;
@@ -19,16 +23,13 @@ public class Deck {
 		return suitCards;
 	}
 
-	public ArrayList<String> getCards() {
-		return cards;
-	}
 
-	public ArrayList<String> createDeck() {
+	public ArrayList<String> createKeyDeck() {
 		ArrayList<String> newDeck = new ArrayList<String>();
-		ArrayList<String> spades = createSuit("Spades");
-		ArrayList<String> hearts = createSuit("Hearts");
-		ArrayList<String> clubs = createSuit("Clubs");
-		ArrayList<String> diamonds = createSuit("Diamonds");
+		ArrayList<String> spades = createSuitKeys("Spades");
+		ArrayList<String> hearts = createSuitKeys("Hearts");
+		ArrayList<String> clubs = createSuitKeys("Clubs");
+		ArrayList<String> diamonds = createSuitKeys("Diamonds");
 		newDeck.addAll(spades);
 		newDeck.addAll(hearts);
 		newDeck.addAll(clubs);

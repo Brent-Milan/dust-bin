@@ -116,13 +116,6 @@ public class CardTest {
 		assertEquals(expected, underTest.convertToString("Diamonds"));
 	}
 	
-	
-	
-	
-	
-	
-	
-	
 	private int findElementFrequency(String[] array, String message) {
 		int count = 0;
 		for(String suitName: array) {
