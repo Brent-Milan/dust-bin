@@ -3,6 +3,7 @@ package production;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.junit.Before;
@@ -29,20 +30,28 @@ public class DeckTest {
 	@Test
 	public void shouldReturnListWithSizeOf52() {
 		int expected = 52;
-		ArrayList<String> result = underTest.createKeyDeck();
+		ArrayList<String> result = underTest.createDeckKeys();
 		
 		assertEquals(expected, result.size());
 	}
 	
 	@Test
 	public void shouldContainAnAceOfEachSuit() {
-		ArrayList<String> result = underTest.createKeyDeck();
+		ArrayList<String> result = underTest.createDeckKeys();
 		List<String> aces = new ArrayList<String>();
 		aces.add("SA");
 		aces.add("CA");
 		aces.add("DA");
 		aces.add("HA");
 		assertTrue(result.containsAll(aces));
+	}
+	
+	@Test
+	public void shouldReturnValueOf2() {
+		HashMap<String, Integer> test = underTest.createDeck();
+		int result = test.get("S2");
+		
+		assertEquals(2, result);
 	}
 
 
