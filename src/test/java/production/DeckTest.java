@@ -25,13 +25,13 @@ public class DeckTest {
 		assertEquals(expected, underTest.createSuit("Spades"));
 	}
 	
-//	@Test
-//	public void shouldReturnListWithSizeOf52() {
-//		int expected = 52;
-//		ArrayList<String> result = underTest.createDeck();
-//		
-//		assertEquals(expected, result.size());
-//	}
+	@Test
+	public void shouldReturnListWithSizeOf52() {
+		int expected = 52;
+		ArrayList<String> result = underTest.createDeck();
+		
+		assertEquals(expected, result.size());
+	}
 
 
 	private ArrayList<String> createTestSuitSpades() {

@@ -23,10 +23,17 @@ public class Deck {
 		return cards;
 	}
 
-//	public ArrayList<String> createDeck() {
-//		ArrayList<String> newDeck = new ArrayList<String>();
-//		ArrayList<String> spades = createSuit("Spades");
-//		return null;
-//	}
+	public ArrayList<String> createDeck() {
+		ArrayList<String> newDeck = new ArrayList<String>();
+		ArrayList<String> spades = createSuit("Spades");
+		ArrayList<String> hearts = createSuit("Hearts");
+		ArrayList<String> clubs = createSuit("Clubs");
+		ArrayList<String> diamonds = createSuit("Diamonds");
+		newDeck.addAll(spades);
+		newDeck.addAll(hearts);
+		newDeck.addAll(clubs);
+		newDeck.addAll(diamonds);
+		return newDeck;
+	}
 
 }
