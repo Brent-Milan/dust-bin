@@ -7,7 +7,6 @@ public class Deck {
 	
 	Card card = new Card();
 	
-	
 	public ArrayList<String> createSuitKeys(String suit) {
 		ArrayList<String> suitCards = new ArrayList<String>();
 		String suitLetter = card.convertToString(suit);
@@ -19,7 +18,6 @@ public class Deck {
 		}
 		return suitCards;
 	}
-
 
 	public ArrayList<String> createDeckKeys() {
 		ArrayList<String> newDeck = new ArrayList<String>();
@@ -34,6 +32,17 @@ public class Deck {
 		return newDeck;
 	}
 
+	public HashMap<String, Integer> createSuitMap(String suit) {
+		HashMap<String, Integer> suitMap = new HashMap<String, Integer>();
+		ArrayList<String> keys = createSuitKeys(suit);
+		String[] keysAsArray = keys.toArray(new String[keys.size()]);
+		for(int index = 0; index < keysAsArray.length ; index++) {
+			for(int index2 = 0; index < card.values.length; index++) {
+				suitMap.put(keysAsArray[index], card.values[index2]);
+			}
+		}
+		return suitMap;
+	}
 
 	public HashMap<String, Integer> createDeck() {
 		HashMap<String, Integer> spadeEntries = createSuitMap("Spades");
@@ -49,17 +58,5 @@ public class Deck {
 		return deckMap;
 	}
 	
-	public HashMap<String, Integer> createSuitMap(String suit) {
-		HashMap<String, Integer> suitMap = new HashMap<String, Integer>();
-		ArrayList<String> keys = createSuitKeys(suit);
-		String[] keysAsArray = keys.toArray(new String[keys.size()]);
-		int[] values = card.values;
-		for(int index = 0; index < keysAsArray.length ; index++) {
-			for(int index2 = 0; index < values.length; index++) {
-				suitMap.put(keysAsArray[index], values[index2]);
-			}
-		}
-			return suitMap;
-	}
 
 }

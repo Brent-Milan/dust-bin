@@ -21,9 +21,7 @@ public class DeckTest {
 	
 	@Test
 	public void shouldReturnSuitOfSpades() {
-		ArrayList<String> expected = createTestSuitSpades();
-		
-		
+		ArrayList<String> expected = createTestSuitSpades();	
 		assertEquals(expected, underTest.createSuitKeys("Spades"));
 	}
 	
@@ -61,7 +59,6 @@ public class DeckTest {
 		
 		assertEquals(2, result);
 	}
-
 
 	private ArrayList<String> createTestSuitSpades() {
 		ArrayList<String> spades = new ArrayList<String>();
