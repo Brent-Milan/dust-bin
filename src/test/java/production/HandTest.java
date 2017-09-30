@@ -15,9 +15,16 @@ public class HandTest {
 	}
 
 	@Test
-	public void shouldReturnAnArrayWithALengthOf5() {
+	public void shouldReturnAnArrayWithASizeOf5ForPlayer1() {
 		int expected = 5;
 		assertEquals(expected, underTest.player1.length);
-	}
+	}  
+	 
+	
+//	@Test
+//	public void shouldReturnAnArrayWithASizeOf5ForPlayer2() {
+//		int expected = 5;
+//		assertEquals(expected, underTest.player2.length);
+//	} 
 
 }
