@@ -11,26 +11,26 @@ import org.junit.Test;
 public class HandTest {
 	
 	Hand underTest;
-	Deck deck;
+	Deck deck = new Deck();
 	
 	@Before
 	public void setUp() throws Exception {
 		underTest = new Hand();
-		deck = new Deck();
 	}
 	
 	@Test
 	public void shouldReturnArrayListOf52Keys() {
 		int expected  = 52;
-		assertEquals(expected, underTest.getKeyList());
+		ArrayList<String> testList = underTest.getKeyList();
+		assertEquals(expected, testList.size());
 	}
 
 	@Test
 	public void shouldRemoveFiveKeysFromDeckOf52_AndReturnSizeOf47() {
-		HashMap<String, Integer> testMap = deck.createDeck();
-		underTest.drawCards(testMap); 
-		assertEquals(47, testMap.size());
-	}  
+		underTest.drawCards(underTest.gameDeck); 
+		assertEquals(47, underTest.gameDeck.size());
+		
+	}   
 	 
 
 }

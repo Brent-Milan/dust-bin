@@ -11,7 +11,7 @@ public class Deck {
 		ArrayList<String> suitCards = new ArrayList<String>();
 		String suitLetter = card.convertToString(suit);
 		int[] values = card.values;
-		for(int index = 0; index < 13; index++) {
+		for(int index = 0; index < values.length; index++) {
 			String value = card.convertToString(values[index]);
 			String card = suitLetter + value;
 			suitCards.add(card);
