@@ -59,6 +59,22 @@ public class DeckTest {
 		
 		assertEquals(2, result);
 	}
+	
+	@Test
+	public void testSuitMap_shouldReturnSizeOf13() {
+		HashMap<String, Integer> testSuitMap = underTest.createSuitMap("Spades");
+		int expected = 13;
+		
+		assertEquals(expected, testSuitMap.size());
+	}
+	
+	@Test
+	public void shouldReturnSizeOf52() {
+		HashMap<String, Integer> test = underTest.createDeck();
+		int expectedSize = 52;
+		
+		assertEquals(expectedSize, test.size());
+	}
 
 	private ArrayList<String> createTestSuitSpades() {
 		ArrayList<String> spades = new ArrayList<String>();

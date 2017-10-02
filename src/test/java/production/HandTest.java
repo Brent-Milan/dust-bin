@@ -2,29 +2,35 @@ package production;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.junit.Before;
 import org.junit.Test;
 
 public class HandTest {
 	
 	Hand underTest;
-
+	Deck deck;
+	
 	@Before
 	public void setUp() throws Exception {
 		underTest = new Hand();
+		deck = new Deck();
+	}
+	
+	@Test
+	public void shouldReturnArrayListOf52Keys() {
+		int expected  = 52;
+		assertEquals(expected, underTest.getKeyList());
 	}
 
 	@Test
-	public void shouldReturnAnArrayWithASizeOf5ForPlayer1() {
-		int expected = 5;
-		assertEquals(expected, underTest.player1.length);
+	public void shouldRemoveFiveKeysFromDeckOf52_AndReturnSizeOf47() {
+		HashMap<String, Integer> testMap = deck.createDeck();
+		underTest.drawCards(testMap); 
+		assertEquals(47, testMap.size());
 	}  
 	 
-	
-//	@Test
-//	public void shouldReturnAnArrayWithASizeOf5ForPlayer2() {
-//		int expected = 5;
-//		assertEquals(expected, underTest.player2.length);
-//	} 
 
 }

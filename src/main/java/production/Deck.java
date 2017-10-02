@@ -11,13 +11,13 @@ public class Deck {
 		ArrayList<String> suitCards = new ArrayList<String>();
 		String suitLetter = card.convertToString(suit);
 		int[] values = card.values;
-		for(int index = 0; index < values.length; index++) {
+		for(int index = 0; index < 13; index++) {
 			String value = card.convertToString(values[index]);
 			String card = suitLetter + value;
 			suitCards.add(card);
 		}
 		return suitCards;
-	}
+	} 
 
 	public ArrayList<String> createDeckKeys() {
 		ArrayList<String> newDeck = new ArrayList<String>();
@@ -48,7 +48,7 @@ public class Deck {
 		HashMap<String, Integer> spadeEntries = createSuitMap("Spades");
 		HashMap<String, Integer> heartEntries = createSuitMap("Hearts"); 
 		HashMap<String, Integer> clubEntries = createSuitMap("Club"); 
-		HashMap<String, Integer> diamondEntries = createSuitMap("Diamond"); 
+		HashMap<String, Integer> diamondEntries = createSuitMap("Diamonds"); 
 		
 		HashMap<String, Integer> deckMap = new HashMap<String, Integer>(); 
 		deckMap.putAll(spadeEntries);
@@ -56,7 +56,7 @@ public class Deck {
 		deckMap.putAll(clubEntries);
 		deckMap.putAll(diamondEntries);
 		return deckMap;
-	}
+	} 
 	
 
 }

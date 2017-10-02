@@ -1,17 +1,29 @@
 package production;
 
+
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 public class Hand {
 	
-	Random r = new Random();
-	int element1 = 1 + r.nextInt(52);
-	int element2 = 1 + r.nextInt(52);
-	int element3 = 1 + r.nextInt(52);
-	int element4 = 1 + r.nextInt(52);
-	int element5 = 1 + r.nextInt(52);
+	Deck deck = new Deck();
+	protected ArrayList<String> keyList = deck.createDeckKeys();
 	
-	Card[] player1 = new Card[5];
+	Random r = new Random();
+
+	public void drawCards(HashMap<String, Integer> deck) {
+		int numberOfCardsDrawn = 5;
+		for(int index = 1; index < numberOfCardsDrawn; index++) {
+			int randomElement = r.nextInt(deck.size());
+			String randomKey = keyList.get(randomElement);
+			deck.remove(randomKey);
+		}  
+	} 
+	
+	protected ArrayList<String> getKeyList() {
+		return keyList;
+	}
 
 
 }

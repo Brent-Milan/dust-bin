@@ -21,7 +21,7 @@ public class Card {
 			return "A";
 		}
 		return "Not a valid card value";
-		}
+		} 
 	
 	public String convertToString(String message) {
 		if(message == "Spades") {
